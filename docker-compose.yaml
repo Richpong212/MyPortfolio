@@ -1,0 +1,15 @@
+services:
+  ##FRONTEND##
+  frontend:
+    container_name: frontend-porfolio
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+      tags:
+        - frontend:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
+    env_file:
+      - ./frontend/.env
