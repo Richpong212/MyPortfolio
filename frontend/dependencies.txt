@@ -1,2 +1,7 @@
 tailwindcss@3
 axios
+react-icons
+react-simple-typewriter
+three
+@react-three/fiber 
+@react-three/drei
