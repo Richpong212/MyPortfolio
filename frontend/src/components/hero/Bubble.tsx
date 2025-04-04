@@ -1,15 +1,20 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
+import { Canvas } from '@react-three/fiber'
+import { Sphere, MeshDistortMaterial, OrbitControls } from '@react-three/drei'
 
 
 const Bubble = () => {
     return (
         <div>
             <div className='relative flex items-center '>
-                <div><img
-                    src="/images/portfolio.png"
-                    alt="portfolio image"
-                /></div>
+
+                <div>
+                    <img
+                        src="/images/portfolio.png"
+                        alt="portfolio image"
+                        className='relative z-10'
+                    /></div>
             </div>
             {/* Typewriter Text */}
             <div className="absolute top-16 left-1/2 -translate-x-1/2 bg-white text-black px-4 py-2 rounded-xl shadow-md text-sm font-medium max-w-xs">
@@ -23,8 +28,11 @@ const Bubble = () => {
                     typeSpeed={60}
                     deleteSpeed={40}
                     delaySpeed={2000}
+
                 />
             </div>
+
+
 
         </div>
     )
